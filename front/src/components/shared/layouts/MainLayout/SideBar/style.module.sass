@@ -1,0 +1,59 @@
+.sidebar
+  background: #fff
+  grid-area: sidebar
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  padding: 30px 28px
+
+  .navbarList
+    padding: 0
+
+    .navbarItem
+      margin-bottom: 29px
+
+      .navbarLink
+        font-weight: 500
+        font-size: 18px
+        line-height: 125%
+        color: #20293A
+        padding: 8px 10px
+      .navbarLinkActive
+        background: #E7EBF1
+        border-radius: 24px
+        padding: 8px 10px
+
+  .navbarBottom
+    padding: 0
+    .navbarBottomImg
+      margin-bottom: 18px
+      border-radius: 50%
+
+    .navbarBottomName
+      margin-top: 22px
+      font-style: normal
+      font-weight: 400
+      line-height: 125%
+      color: #4C9BE3
+
+    .navbarBottomDesc
+      font-style: normal
+      font-weight: 400
+      font-size: 14px
+      line-height: 150%
+      color: #20293A
+
+    .navbarBottomBtn
+      background: transparent
+      color: #4C9BE3
+      border: none
+      outline: none
+      margin-top: 9px
+      cursor: pointer
+
+      &:hover
+        color: indianred
+
+@media only screen and (max-width: 550px)
+  .sidebar
+    display: none

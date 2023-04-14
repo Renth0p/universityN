@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap')
+
+$colorBlue: #4C9BE3
+$colorTextBlack: #20293A
+$colorTextGrey: #545B61
+$col-picture: 1.2fr
+$col-panel: 1.2fr
+$col-information: 6fr
+
+
+// Экраны
+// ======
+$max-width: 1248px
+$min-width: 280px
+$desktop-lg: 1399
+$desktop: 1199
+$tablet: 991
+$mobile: 767
+$mobile-sm: 575
+
+$width: 0
+$height: 0
+
+@media only screen and (max-width: 600px) and (min-width: 300px)
+  .projectWrapper
+      display: flex
+
+@mixin InputStyle
+  .input
+    width: 395px
+    height: 40px
+    background: #F2F5F9
+    border: 1px solid #D5DCE4
+    border-radius: 4px
+    outline: none
+    padding-left: 14px
+    transition: .4s ease-in-out
+  &:focus
+    border: 2px solid #9EF3FF
+    &::placeholder
+      color: black
+  &:active
+    border: 1px solid #99a7b2
+    &::placeholder
+      color: black
+
+@mixin FullButton($width, $height)
+  .fullButton
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 8px 24px
+    width: $width
+    height: $height
+    background: #1B2BBD
+    border-radius: 8px
+    color: #ffffff
+    cursor: pointer
+    outline: none
+    border: none
+    transition: .4s ease
+    &:hover
+      color: #F2F5F9
+      background: #4050da
+
+@mixin EmptyButton($width, $height)
+  .emptyButton
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 8px 24px
+    width: $width
+    height: $height
+    border: 1px solid #1B2BBD
+    border-radius: 8px
+    font-weight: 400
+    font-size: 16px
+    line-height: 125%
+    color: #1B2BBD
+    cursor: pointer
+    transition: .4s ease
+    &:hover
+      border: none
+      background: #4050da
+      color: #F2F5F9
+
+@mixin contactTab
+  .tableRow
+    .tableRowImage
+      display: flex
+      align-items: center
+      img
+        border-radius: 50%
+      .tableRowText
+        padding-left: 16px
+        .tableRowName
+          font-weight: 400
+          font-size: 16px
+          line-height: 125%
+          color: #20293A
+        .tableRowPost
+          font-style: normal
+          font-weight: 400
+          font-size: 14px
+          line-height: 150%
+          color: #8EA1AD
+  .tableRowSub
+    font-weight: 600
+    font-size: 16px
+    line-height: 125%
+    color: #20293A
+  .tableRowPhone
+    font-weight: 400
+    font-size: 16px
+    line-height: 125%
+    color: #20293A
+  .tableRowEmail
+    font-weight: 400
+    font-size: 16px
+    line-height: 125%
+    color: #2d85de
+
+@mixin tableLink
+  font-style: normal
+  font-weight: 400
+  font-size: 16px
+  line-height: 125%
+  color: $colorBlue
+  margin-right: 30px
+
+@mixin tableText
+  font-style: normal
+  font-weight: 400
+  font-size: 16px
+  line-height: 125%
+  color: $colorTextBlack
+
+@mixin tableHeaderText
+  font-weight: 400
+  font-size: 12px
+  line-height: 100%
+  color: $colorTextGrey
+
+@mixin tableHeaderPost
+  font-style: normal
+  font-weight: 400
+  font-size: 14px
+  line-height: 150%
+  color: $colorTextGrey
+
+@mixin clearfix
+  &:after
+    content: ''
+    display: table
+    clear: both
+
+
+@mixin grad($color1,$color2)
+  background: $color2
+  background: linear-gradient(top, $color1, $color2)
+
+
+@mixin rotate($rotate)
+  transform: rotate($rotate+deg)
+
+
+@mixin max-width($width)
+  @media only screen and (max-width: #{$width}px)
+    @content
+
+@mixin min-width($width)
+  @media only screen and (min-width: #{$width}px)
+    @content
+
+@mixin min-max-width($minWidth, $maxWidth)
+  @media only screen and (min-width: #{$minWidth}px) and (max-width: #{$maxWidth}px)
+    @content
+
+@mixin max-height($height)
+  @media only screen and (max-height: #{$height}px)
+    @content
+
+@mixin min-height($height)
+  @media only screen and (min-height: #{$height}px)
+    @content
+
+
+// Основные медиазапросы
+// =====================
+// desktop >= 992px
+@mixin desktop()
+  +min-width($tablet)
+    @content
+
+// desktop-lg >= 1400px
+@mixin desktop-lg()
+  +min-width($desktop-lg)
+    @content
+
+// 1200px <= desktop-md <= 1399px
+@mixin desktop-md()
+  +min-max-width($desktop, $desktop-lg)
+    @content
+
+// 992px <= desktop-sm <= 1199px
+@mixin desktop-sm()
+  +min-max-width($tablet, $desktop)
+    @content
+
+// 768px <= tablet <= 991px
+@mixin tablet()
+  +min-max-width($mobile, $tablet)
+    @content
+
+// mobile <= 767px
+@mixin mobile()
+  +max-width($mobile)
+    @content
+
+// 576px <= mobile-lg <= 767px
+@mixin mobile-lg()
+  +min-max-width($mobile-sm, $mobile)
+    @content
+
+// mobile-sm <= 575px
+@mixin mobile-sm()
+  +max-width($mobile-sm)
+    @content
+
+// desktop-tablet >= 768px
+@mixin desktop-tablet()
+  +min-width($mobile)
+    @content
+
+// tablet-mobile <= 991px
+@mixin tablet-mobile()
+  +max-width($tablet)
+    @content
+
+@mixin full-wrapper()
+  margin: 0 auto
+  max-width: $max-width
+  min-width: $min-width
+  +desktop-lg
+    padding: 0 64px
+  +desktop()
+    padding: 0 32px
+  +tablet-mobile()
+    padding: 0 16px
+
+
+@mixin width($width)
+  max-width: $width
+  width: $width
+
+@mixin placeholder()
+  &::-webkit-input-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content

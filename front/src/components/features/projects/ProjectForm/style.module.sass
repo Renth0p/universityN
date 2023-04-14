@@ -1,0 +1,149 @@
+@import "../../../../assets/styles/config"
+
+.projectFormWrapper
+  display: flex
+  justify-content: space-between
+  padding: 20px 30px
+  width: 889px
+  height: 669px
+
+  .projectFormButton
+    margin-top: 22px
+    display: flex
+    .projectFormButtonAdd
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      padding: 8px 24px
+      width: 200px
+      height: 40px
+      background: #1B2BBD
+      border-radius: 8px
+      color: #ffffff
+      cursor: pointer
+      outline: none
+      border: none
+      transition: .4s ease
+      margin-bottom: 11px
+      &:hover
+        color: #F2F5F9
+        background: #4050da
+    .projectFormButtonCancel
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      padding: 8px 24px
+      width: 180px
+      height: 40px
+      border: 1px solid #1B2BBD
+      border-radius: 8px
+      font-weight: 400
+      margin-left: 22px
+      font-size: 16px
+      line-height: 125%
+      color: #1B2BBD
+      cursor: pointer
+      transition: .4s ease
+      &:hover
+        border: none
+        background: #4050da
+        color: #F2F5F9
+
+  .projectForm
+    .projectFormLabel
+      display: flex
+      flex-direction: column
+      padding: 10px 0
+
+      .projectFormLabelTextArea
+        resize: vertical
+        border: 1px solid #D5DCE4
+        background: #F2F5F9
+        width: 520px
+        padding: 8px 2px 2px 8px
+        min-height: 66px
+        border-radius: 4px
+        outline: none
+        &:hover
+          background: #F2F5F9
+          border: 1px solid #B8CAD6
+          border-radius: 4px
+          color: #8EA1AD
+          outline: none
+        &:active
+          border: 1px solid #B8CAD6
+          border-radius: 4px
+          color: #2F3038
+          outline: none
+        &:focus
+          border: 1px solid #9EF3FF
+          border-radius: 4px
+          color: #2F3038
+          outline: none
+
+      .projectFormLabelTitle
+        font-weight: 400
+        font-size: 16px
+        line-height: 125%
+        color: #8EA1AD
+        padding: 8px 0
+
+      .projectFormLabelTitleBold
+        font-weight: 500
+        font-size: 20px
+        line-height: 150%
+        color: #20293A
+
+      .projectFormLabelBlockText
+        padding: 10px 0
+        display: flex
+        .projectFormLabelText
+          font-style: normal
+          font-weight: 400
+          font-size: 16px
+          line-height: 100%
+          color: #8EA1AD
+        .projectFormLabelText:first-child
+          span
+            font-style: normal
+            font-weight: 600
+            font-size: 16px
+            line-height: 100%
+            color: #4C9BE3
+        .projectFormLabelText:last-child
+          padding: 0 10px
+          span
+            font-style: normal
+            font-weight: 600
+            font-size: 16px
+            line-height: 100%
+            color: #545B61
+  .blockWithButtons
+    padding: 250px 0
+    .blockWithButtonsTitle
+      font-weight: 400
+      font-size: 16px
+      line-height: 150%
+      color: #545B61
+      padding: 16px 0
+
+@media screen and (min-width: 310px) and (max-width: 400px)
+  .projectFormWrapper
+    display: flex
+    padding: 10px 20px
+    flex-direction: column
+    width: auto
+  .blockWithButtons
+    padding: 50px 0 !important
+  .projectFormLabelTextArea
+    resize: vertical
+    border: 1px solid #D5DCE4
+    background: #F2F5F9
+    width: 260px !important
+    padding: 8px 2px 2px 8px
+    min-height: 72px
+    border-radius: 4px
+    outline: none
+

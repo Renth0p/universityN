@@ -1,0 +1,29 @@
+.input
+  width: 395px
+  height: 40px
+  background: #F2F5F9
+  border: 1px solid #D5DCE4
+  border-radius: 4px
+  outline: none
+  padding-left: 14px
+  transition: .4s ease-in-out
+  &:focus
+    border: 2px solid #9EF3FF
+    &::placeholder
+      color: black
+  &:active
+    border: 1px solid #99a7b2
+    &::placeholder
+      color: black
+
+@media screen and (max-width: 320px)
+  .input
+    width: 246px
+    &:focus
+      border: 2px solid #9EF3FF
+      &::placeholder
+        color: black
+    &:active
+      border: 1px solid #99a7b2
+      &::placeholder
+        color: black

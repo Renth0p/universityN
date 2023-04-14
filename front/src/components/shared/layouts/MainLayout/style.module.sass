@@ -1,0 +1,30 @@
+.container
+  display: grid
+  height: 100vh
+  grid-template-columns: 1fr 1fr 2.3fr 3fr
+  grid-template-areas: "nav nav nav nav" "sidebar main main main" "sidebar footer footer footer"
+
+.mainContent
+  background: #F2F5F9
+  grid-area: main
+  overflow-y: scroll
+  padding-top: 40px
+  padding-bottom: 40px
+  padding-left: 30px
+  min-height: 779px
+  &::-webkit-scrollbar
+    display: none
+
+  &::-webkit-scrollbar-button
+    display: none
+
+.sidebar
+  background: #fff
+  grid-area: sidebar
+
+@media only screen and (max-width: 550px)
+  .container
+    display: flex
+    flex-direction: column
+  .sidebar
+    display: none

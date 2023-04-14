@@ -1,0 +1,59 @@
+.navbar
+  background: #ffffff
+  grid-area: nav
+  border-bottom: 1px solid #D5DCE4
+  padding: 20px 40px
+  .navbarWrapper
+    display: flex
+    justify-content: space-between
+    .navbarWidgets
+      display: flex
+      justify-content: space-between
+      align-content: center
+      .navbarWidgetsDate
+        display: flex
+        flex-direction: column
+
+.navbarBurger
+  display: none
+.navbarLinks
+  display: none
+
+@media (max-width: 768px)
+  .navbarResponsive
+    display: none
+  .navbarBurger
+    display: block
+    position: absolute
+    top: 0
+    right: 0
+    margin: 1rem
+    padding: 0.5rem
+    background-color: transparent
+    border: none
+    cursor: pointer
+  .navbarWidgets
+    display: none !important
+  .navbarWidgetsDate
+    display: none
+
+@media (max-width: 768px)
+  .navbarLinks
+    position: absolute
+    top: 4rem
+    right: 0
+    background-color: #fff
+    width: 100%
+    padding: 1rem
+    display: none
+  .navbarLinksActive
+    display: block
+  .navbarResponsive
+    display: none
+  .navbarList
+    list-style: none
+    margin: 0 20px
+    padding: 0
+    text-align: center
+  .navbarItem
+    margin: 0.5rem 0

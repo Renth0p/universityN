@@ -1,0 +1,106 @@
+@import "../../../assets/styles/config"
+
+.container
+  display: grid
+  grid-template-columns: $col-picture $col-panel $col-information
+  gap: 8px 19px
+  grid-auto-flow: row
+  grid-template-areas: "picture panel panel" "information panel panel" ". . ."
+  width: 80%
+  margin: 0 auto
+
+.picture
+  grid-area: picture
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-content: center
+  width: 200px
+  margin: 0
+  padding: 0
+  img
+    border-radius: 50%
+
+  .changePic
+    margin-top: 22px
+    border: none
+    cursor: pointer
+    color: #4C9BE3
+    background: transparent
+
+.panel
+  margin-top: 35px
+  width: 1016px
+  min-height: 900px
+  grid-area: panel
+  background: #FFFFFF
+  border-radius: 12px
+
+.information
+  grid-area: information
+
+.modalWindowForm
+  display: flex
+  flex-direction: column
+  .modalWindowFormImg
+    max-width: 100%
+    border-radius: 0
+  .modalWindowFormInput::-webkit-file-upload-button
+    visibility: hidden
+  .modalWindowFormInput
+    border: 1px solid #ccc
+    display: inline-block
+    padding: 6px 12px
+    cursor: pointer
+    margin-left: auto
+    margin-right: auto
+    &:hover
+      border: 1px solid #2d85de
+  .ActiveFile
+    border: 1px solid #13a913
+    &:hover
+      border: 1px solid #13a913 !important
+  .PassiveFile
+    border: 1px solid #981f1f
+  .ErrorMessage
+    color: #981f1f
+    font-size: 18px
+    padding: 10px 0
+    text-align: center
+    font-weight: 400
+  .SuccessMessage
+    color: #39ce17
+    font-size: 18px
+    padding: 10px 0
+    text-align: center
+    font-weight: 400
+  .modalWindowFormBtn
+    margin-top: 10px
+    margin-bottom: 10px
+  .EmptyButtonProfile
+    width: 220px
+    height: 40px
+    border-radius: 3px
+    margin: 20px auto 10px
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 8px 24px
+    border: 1px solid #1B2BBD
+    font-weight: 400
+    font-size: 16px
+    line-height: 125%
+    color: #1B2BBD
+    cursor: pointer
+    transition: .4s ease
+    &:hover
+      background: #F2F5F9
+
+@media only screen and (max-width: $mobile)
+  $col-picture: 1fr
+  $col-panel: 1fr
+  $col-information: 1fr
+
+  .container
+    grid-template-columns: $col-picture $col-panel $col-information
+    grid-template-areas: "picture picture picture" "panel panel panel" "information information information"

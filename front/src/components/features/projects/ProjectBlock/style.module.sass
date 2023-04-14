@@ -1,0 +1,163 @@
+.projectBlog
+  width: 456px
+  padding-left: 120px
+
+  h1
+    font-size: 28px
+    font-weight: 600
+    padding: 33px
+
+  .projectBlogTop
+    padding: 6px 0
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 20px
+
+    .projectBlogTitle
+      padding: 0
+      margin: 0
+      display: flex
+      align-items: center
+      justify-content: center
+
+      .projectBlogText
+        font-style: normal
+        font-weight: 400
+        font-size: 16px
+        line-height: 125%
+        color: #20293A
+        margin-right: 12px
+
+      .projectBlogNumber
+        padding: 4px 8px
+        background: #FFFFFF
+        border-radius: 100px
+        align-items: center
+        justify-content: center
+        color: #1B2BBD
+
+    .projectBlogBtn
+      background: transparent
+      outline: none
+      border: none
+      color: #2d85de
+      cursor: pointer
+
+      &:hover
+        color: #1b66b2
+        text-decoration: underline
+
+  .projectCards
+    display: flex
+    flex-direction: column
+
+    .projectCard
+      padding: 20px 20px
+      background: #FFFFFF
+      border-radius: 4px
+      margin-bottom: 16px
+
+      .projectCardTop
+        padding: 2px 0
+        border-bottom: 1px solid #D5DCE4
+
+        .projectCardTopSubject
+          position: relative
+          padding: 4px 0
+          display: flex
+          justify-content: space-between
+          align-items: center
+
+          button
+            background: transparent
+            border: none
+            outline: none
+            cursor: pointer
+
+            img:hover
+              filter: invert(47%) sepia(68%) saturate(648%) hue-rotate(172deg) brightness(88%) contrast(98%)
+
+          p
+            font-style: normal
+            font-weight: 400
+            font-size: 14px
+            line-height: 100%
+            color: #8EA1AD
+
+          .dropMenu
+            display: flex
+            flex-direction: column
+            box-shadow: 0 2px 8px rgba(80, 89, 121, 0.25)
+            border-radius: 8px
+            background-color: #fff
+            padding: 20px
+            border: 1px solid #ccc
+            list-style: none
+            position: absolute
+            z-index: 100
+            top: 0
+            left: 298px
+
+            .dropMenuItem
+              display: flex
+              align-items: center
+              padding: 5px 0
+
+              &:hover
+                color: #2d85de
+                filter: invert(47%) sepia(68%) saturate(648%) hue-rotate(172deg) brightness(88%) contrast(98%)
+
+              img
+                margin-right: 8px
+
+        .projectCardTopTitle
+          padding: 8px 0
+
+          p
+            font-style: normal
+            font-weight: 500
+            font-size: 15px
+            line-height: 100%
+            color: #2F3038
+
+      .projectCardBottom
+        padding-top: 22px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        align-content: center
+        .projectCardDeadLine
+          padding: 2px 3px
+          background: #8CBC7B
+          border-radius: 4px
+          width: auto
+          display: flex
+          align-content: center
+          align-items: center
+          p
+            margin-left: 6px
+            font-weight: 400
+            font-size: 14px
+            line-height: 100%
+            color: #20293A
+        .projectCardDeadLineRed
+          background: #FF8383
+        .projectCardAttach
+          display: flex
+          align-items: flex-end
+          text-align: right
+          img
+            margin-right: 9px
+
+@media only screen and (max-width: 600px) and (min-width: 300px)
+  .projectBlog
+    width: 400px
+    padding-left: 22px
+
+    .projectCard
+      .projectCardTopSubject
+        .dropMenu
+          top: 31px !important
+          left: 67px !important

@@ -1,0 +1,134 @@
+@import "../../../assets/styles/config"
+
+.registerPage
+  justify-content: center
+  align-items: center
+  padding: 30px 0
+
+  .registerPageImg
+    text-align: center
+
+    img
+      margin: 0 auto
+
+  .registerForm
+    margin-top: 40px
+    width: 560px
+    padding: 60px 75px
+    border-radius: 12px
+    background: #FFFFFF
+    margin-left: auto
+    margin-right: auto
+
+    .registerFormTitle
+      font-style: normal
+      font-weight: 500
+      font-size: 32px
+      line-height: 125%
+      text-align: center
+      color: #20293A
+      margin-bottom: 28px
+    .registerLabel
+      display: flex
+      flex-direction: column
+      justify-content: center
+      color: #545B61
+      padding-bottom: 12px
+
+    .registerFormButton
+      align-items: center
+      display: flex
+      justify-content: center
+      @include FullButton(300px, 40px)
+
+.authHelp
+  margin-top: 40px
+  display: flex
+  text-align: center
+  align-items: center
+  justify-content: center
+
+  .authHelpText
+    display: flex
+    text-align: center
+    font-weight: 400
+    font-size: 18px
+    line-height: 150%
+    color: #545B61
+
+  .authHelpLink
+    padding-left: 10px
+    display: flex
+    text-align: center
+    font-weight: 400
+    font-size: 18px
+    line-height: 150%
+    color: #4C9BE3
+
+.ErrorMessage
+  color: #981f1f
+  font-weight: 400
+  line-height: 150%
+
+@media screen and (max-width: 320px)
+  .registerPage
+    padding: 30px 0
+    .registerPageImg
+      text-align: center
+      img
+        margin: 0 auto
+        width: 185px
+        height: 32px
+    .registerForm
+      margin-top: 40px
+      width: 296px
+      height: 400px
+      padding: 0
+      align-items: center
+      justify-content: center
+      border-radius: 12px
+      background: #FFFFFF
+      .registerFormTitle
+        padding-top: 52px
+        font-style: normal
+        font-weight: 500
+        font-size: 32px
+        line-height: 125%
+        text-align: center
+        color: #20293A
+        margin-bottom: 28px
+      .registerLabel
+        display: flex
+        flex-direction: column
+        justify-content: center
+        margin-bottom: 22px
+        padding: 0 30px
+        input
+          padding-bottom: 22px
+      .registerFormButton
+        align-items: center
+        display: flex
+        justify-content: center
+        @include FullButton(100px, 40px)
+
+.authHelp
+  margin-top: 40px
+  display: flex
+  flex-direction: column
+
+  .authHelpText
+    display: flex
+    text-align: center
+    font-weight: 400
+    font-size: 15px
+    line-height: 150%
+    color: #545B61
+
+  .authHelpLink
+    padding-left: 10px
+    display: flex
+    text-align: center
+    font-weight: 400
+    font-size: 15px
+    line-height: 150%
+    color: #4C9BE3

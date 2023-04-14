@@ -1,0 +1,165 @@
+.projectCardWrapper
+  display: flex
+  justify-content: space-between
+  padding: 20px 30px
+  width: 1002px
+  height: 669px
+
+  .projectCardSubject
+    font-weight: 400
+    font-size: 15px
+    line-height: 150%
+    color: #8EA1AD
+
+  .projectCardTopic
+    font-weight: 500
+    font-size: 26px
+    line-height: 125%
+    color: #20293A
+
+  .projectCardTopicTime
+    display: flex
+    flex-direction: row
+    padding: 10px 0
+
+    .projectCardTopicTimeStatus
+      margin-right: 14px
+      font-weight: 400
+      font-size: 14px
+      line-height: 100%
+      color: #8EA1AD
+
+      span
+        color: #2d85de
+        font-size: 15px
+
+    .projectCardTopicTimeDate
+      font-weight: 400
+      font-size: 14px
+      line-height: 100%
+      color: #8EA1AD
+
+      span
+        font-size: 15px
+        color: #2F3038
+
+  .projectCardDesc
+    .projectCardDescText
+      max-width: 680px
+      font-style: normal
+      font-weight: 400
+      font-size: 16px
+      line-height: 125%
+      overflow: hidden
+      display: -webkit-box
+      -webkit-line-clamp: 8
+      -webkit-box-orient: vertical
+
+    .projectCardDescTop
+      display: flex
+      align-items: center
+
+      h1
+        font-weight: 500
+        font-size: 20px
+        line-height: 150%
+        color: #20293A
+
+      button
+        font-size: 15px
+        margin-left: 11px
+        background: transparent
+        color: #2d85de
+        border: none
+        outline: none
+        cursor: pointer
+
+        &:hover
+          color: #4f94dc
+          text-decoration: underline
+
+  .attachBlock
+    padding: 22px 0
+    .attachBlockList
+      padding: 0
+      margin: 0
+      .attachBlockItem
+        padding: 20px 0
+        .attachItemWrapper
+          display: flex
+          align-content: center
+          justify-content: center
+          align-items: center
+          .attachItemType
+            background: #D5E2EA
+            width: 106px
+            height: 70px
+            border-radius: 4px
+            display: flex
+            align-items: center
+            justify-content: center
+            p
+              font-weight: 700
+              font-size: 16px
+              line-height: 125%
+              color: #545B61
+          .attachItemTypeText
+            padding: 0 20px
+            .attachItemTypeLink
+              display: flex
+              flex-direction: row-reverse
+              align-items: center
+              align-content: center
+              padding: 6px 0
+              p
+                font-weight: 500
+                font-size: 17px
+                line-height: 100%
+                color: #20293A
+                padding-bottom: 8px
+                transition: .4s ease
+                &:hover
+                  color: #2d85de
+              img
+                margin-left: 9px
+
+            p
+              font-weight: 400
+              font-size: 14px
+              line-height: 100%
+              color: #8EA1AD
+            button
+              padding: 0
+              margin: 0
+              background: transparent
+              border: none
+              outline: none
+              cursor: pointer
+              color: #2d85de
+              transition: .3s ease
+              &:hover
+                color: #1568bb
+
+    .attachBlockTitle
+      font-weight: 500
+      font-size: 20px
+      line-height: 150%
+      color: #20293A
+
+  .blockWithButtons
+    padding: 250px 0
+
+    .blockWithButtonsTitle
+      font-weight: 400
+      font-size: 16px
+      line-height: 150%
+      color: #545B61
+      padding: 16px 0
+
+@media screen and (min-width: 310px) and (max-width: 400px)
+  .projectCardWrapper
+    display: flex
+    flex-direction: column
+    width: auto
+  .blockWithButtons
+    padding: 50px 0 !important
