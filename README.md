@@ -1,13 +1,7 @@
-# students-lk
+# universityN
 
-## Сборка фронта
-
-```bash
-cd /home/meatballs/meatballs.w6p.ru/front && npm ci && npm run build && npm run reload
-```
-
-## Сборка бэка
+## Link to GitLab
 
 ```bash
-cd /home/meatballs/meatballs.w6p.ru/back && composer install && php artisan migrate
+<a href="https://gitlab.com/webpractik/students/2022/students-lk-meatballs">link</a>
 ```
