@@ -13,6 +13,7 @@ universityN - это практический проект, где была пр
 ## Link to GitLab
 
 <a href="https://gitlab.com/webpractik/students/2022/students-lk-meatballs">**GitLab Project**</a>
+<a href="https://meatballs.w6p.ru/login">**Project Link**</a>
 
 ## Authors
 
